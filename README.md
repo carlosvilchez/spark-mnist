@@ -31,4 +31,4 @@ It means that your JVM cannot deal with the amount of memory it needs. You can c
 export _JAVA_OPTIONS="-Xms1024m -Xmx4096m -XX:MaxPermSize=1024m"
 ```
 
-It will use a maximum of 4Gb of RAM, and more or less is it what it will need.
+It will use a maximum of 4Gb of RAM, and more or less it is what it will need.
