@@ -8,7 +8,20 @@ import HelperFunctions._
 
 object MnistDriver {
 
+  val errorMsg =
+    """ MnistSpark needs 2 parameters to start:
+      |
+      | 1) A train CSV file.
+      | 2) A test CSV file.
+      |
+    """.stripMargin
+  
   def main(args: Array[String]) {
+    if (args.length < 2) {
+      println(errorMsg)
+      throw new RuntimeException("Not enough args")
+    }
+
     val trainFilePath = args(0)
     val testFilePath = args(1)
 
