@@ -13,7 +13,7 @@ We will need to have SBT in our system to compile and run the application.
 
 ### Training and testing files
 
-You can download these files from (kaggle)[https://www.kaggle.com/c/digit-recognizer/data].
+You can download these files from [kaggle](https://www.kaggle.com/c/digit-recognizer/data).
 
 ## Setup
 
