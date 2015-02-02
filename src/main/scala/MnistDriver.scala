@@ -1,3 +1,4 @@
+import org.apache.log4j.Logger
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
@@ -7,6 +8,8 @@ import HelperFunctions._
 
 
 object MnistDriver {
+
+  val logger = Logger.getLogger(getClass().getName())
 
   val errorMsg =
     """ MnistSpark needs 2 parameters to start:
@@ -50,7 +53,7 @@ object MnistDriver {
     val metrics = new MulticlassMetrics(prediction)
 
     // Accuracy: % of examples classified correctly
-    println("metrics.precision: "+metrics.precision)
+    logger.info(s"metrics.precision: ${metrics.precision}")
 
     val rawResData = sc.textFile(testFilePath).cache()
     val resData = getProblemCSV(rawResData)
